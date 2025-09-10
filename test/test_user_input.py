@@ -12,7 +12,7 @@ class TestUserInput(unittest.TestCase):
     def test_valid_input(self, test_input):
         """Test that valid input is accepted"""
         user_input = UserInput(test_input)
-        self.assertEqual(user_input.user_input, test_input)
+        self.assertEqual(user_input(), test_input)
 
     @given(text(max_size=0))
     def test_input_not_empty(self, test_input):
